@@ -13,7 +13,48 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HGNN // GALAXY_LAB</title>
+    
+    <!-- 1.1 Title -->
+    <title>Gauthier Huguenin | Galaxy Lab – IA & Explorations Visuelles</title>
+    
+    <!-- 1.2 - 1.6 Metadata -->
+    <meta name="description" content="Explorations visuelles et expérimentations créatives du Galaxy Lab de Gauthier Huguenin.">
+    <meta name="author" content="Gauthier Huguenin">
+    <meta name="robots" content="index, follow">
+    <meta name="application-name" content="Gauthier Huguenin">
+    <meta name="apple-mobile-web-app-title" content="Gauthier Huguenin">
+    <meta name="keywords" content="Gauthier Huguenin, Galaxy Lab, IA, Art génératif, Explorations visuelles">
+
+    <!-- 2. Open Graph & Twitter -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://hgnn.io/galaxy.html">
+    <meta property="og:title" content="Gauthier Huguenin | Galaxy Lab – IA & Explorations Visuelles">
+    <meta property="og:description" content="Explorations visuelles et expérimentations créatives du Galaxy Lab de Gauthier Huguenin.">
+    <meta property="og:image" content="https://hgnn.io/assets/img/green-goat.webp">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://hgnn.io/galaxy.html">
+    <meta property="twitter:title" content="Gauthier Huguenin | Galaxy Lab – IA & Explorations Visuelles">
+    <meta property="twitter:description" content="Explorations visuelles et expérimentations créatives du Galaxy Lab de Gauthier Huguenin.">
+    <meta property="twitter:image" content="https://hgnn.io/assets/img/green-goat.webp">
+
+    <!-- 3. JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Galaxy Lab – Explorations IA",
+      "url": "https://hgnn.io/galaxy.html",
+      "about": {
+        "@type": "Person",
+        "name": "Gauthier Huguenin",
+        "url": "https://hgnn.io/"
+      }
+    }
+    </script>
+
+    <!-- 4. Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍🚀</text></svg>">
     
     <!-- Fonts: Inter (Link) & Space Mono (Tech) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -42,6 +83,19 @@
 
         .font-mono { font-family: 'Space Mono', monospace; }
 
+        /* Classe sr-only pour l'accessibilité (caché visuellement mais lu par les screen readers) */
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
         /* --- BACKGROUND --- */
         .galaxy-bg {
             background: radial-gradient(ellipse at top, #1B2735 0%, #050505 60%);
@@ -49,16 +103,46 @@
             top: 0; left: 0; width: 100vw; height: 100vh;
             z-index: -1;
         }
+        
+        /* Génération massive d'étoiles via box-shadow */
         .stars {
             width: 1px; height: 1px;
             background: transparent;
-            box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+            box-shadow: 
+                104px 542px #FFF, 1532px 142px #FFF, 842px 932px #FFF, 120px 1854px #FFF, 1842px 42px #FFF, 
+                543px 1253px #FFF, 64px 843px #FFF, 932px 123px #FFF, 1453px 865px #FFF, 234px 1643px #FFF,
+                1643px 432px #FFF, 754px 1743px #FFF, 32px 234px #FFF, 876px 132px #FFF, 1342px 1642px #FFF,
+                432px 654px #FFF, 1765px 876px #FFF, 345px 1876px #FFF, 987px 234px #FFF, 1543px 432px #FFF,
+                654px 1543px #FFF, 23px 987px #FFF, 1234px 54px #FFF, 1987px 1234px #FFF, 432px 654px #FFF,
+                876px 1432px #FFF, 234px 765px #FFF, 1654px 321px #FFF, 543px 1876px #FFF, 1098px 654px #FFF,
+                123px 1234px #FFF, 1876px 543px #FFF, 654px 321px #FFF, 987px 1654px #FFF, 1432px 876px #FFF,
+                210px 432px #FFF, 1321px 1876px #FFF, 567px 123px #FFF, 1765px 1432px #FFF, 876px 654px #FFF,
+                345px 987px #FFF, 1543px 210px #FFF, 432px 1654px #FFF, 1876px 876px #FFF, 987px 345px #FFF,
+                1234px 1543px #FFF, 654px 432px #FFF, 321px 1987px #FFF, 1432px 123px #FFF, 765px 1321px #FFF,
+                1850px 1800px #FFF, 50px 50px #FFF, 1200px 500px #FFF, 400px 1400px #FFF, 1700px 200px #FFF,
+                900px 1100px #FFF, 300px 700px #FFF, 1500px 1500px #FFF, 600px 300px #FFF, 1300px 900px #FFF,
+                1600px 1600px #FFF, 200px 1200px #FFF, 1100px 400px #FFF, 700px 1700px #FFF, 100px 800px #FFF,
+                1900px 600px #FFF, 800px 1300px #FFF, 1400px 100px #FFF, 500px 1900px #FFF, 1000px 1000px #FFF;
             animation: animStar 100s linear infinite;
         }
         .stars:after {
             content: " "; position: absolute; top: 2000px; width: 1px; height: 1px;
             background: transparent;
-            box-shadow: 1744px 122px #FFF , 134px 1321px #FFF , 92px 859px #FFF;
+            box-shadow: 
+                104px 542px #FFF, 1532px 142px #FFF, 842px 932px #FFF, 120px 1854px #FFF, 1842px 42px #FFF, 
+                543px 1253px #FFF, 64px 843px #FFF, 932px 123px #FFF, 1453px 865px #FFF, 234px 1643px #FFF,
+                1643px 432px #FFF, 754px 1743px #FFF, 32px 234px #FFF, 876px 132px #FFF, 1342px 1642px #FFF,
+                432px 654px #FFF, 1765px 876px #FFF, 345px 1876px #FFF, 987px 234px #FFF, 1543px 432px #FFF,
+                654px 1543px #FFF, 23px 987px #FFF, 1234px 54px #FFF, 1987px 1234px #FFF, 432px 654px #FFF,
+                876px 1432px #FFF, 234px 765px #FFF, 1654px 321px #FFF, 543px 1876px #FFF, 1098px 654px #FFF,
+                123px 1234px #FFF, 1876px 543px #FFF, 654px 321px #FFF, 987px 1654px #FFF, 1432px 876px #FFF,
+                210px 432px #FFF, 1321px 1876px #FFF, 567px 123px #FFF, 1765px 1432px #FFF, 876px 654px #FFF,
+                345px 987px #FFF, 1543px 210px #FFF, 432px 1654px #FFF, 1876px 876px #FFF, 987px 345px #FFF,
+                1234px 1543px #FFF, 654px 432px #FFF, 321px 1987px #FFF, 1432px 123px #FFF, 765px 1321px #FFF,
+                1850px 1800px #FFF, 50px 50px #FFF, 1200px 500px #FFF, 400px 1400px #FFF, 1700px 200px #FFF,
+                900px 1100px #FFF, 300px 700px #FFF, 1500px 1500px #FFF, 600px 300px #FFF, 1300px 900px #FFF,
+                1600px 1600px #FFF, 200px 1200px #FFF, 1100px 400px #FFF, 700px 1700px #FFF, 100px 800px #FFF,
+                1900px 600px #FFF, 800px 1300px #FFF, 1400px 100px #FFF, 500px 1900px #FFF, 1000px 1000px #FFF;
         }
         @keyframes animStar { from { transform: translateY(0px); } to { transform: translateY(-2000px); } }
 
@@ -160,14 +244,42 @@
 
     <!-- BACKGROUND -->
     <div class="galaxy-bg"><div class="stars"></div></div>
+    
+    <!-- 5.1 H1 Invisible -->
+    <h1 class="sr-only">Galaxy Lab – Explorations IA par Gauthier Huguenin</h1>
 
     <!-- HEADER / NAV -->
-    <nav class="fixed w-full z-50 top-0 px-6 py-4 flex justify-between items-center mix-blend-difference text-white">
-        <a href="index.html" class="flex items-center gap-3 group opacity-70 hover:opacity-100 transition">
+    <nav class="fixed w-full z-50 top-0 px-6 py-4 flex justify-between items-start mix-blend-difference text-white">
+        <!-- 6.1 Aria-label pour le retour -->
+        <a href="index.html" class="flex items-center gap-3 group opacity-70 hover:opacity-100 transition mt-1" aria-label="Retour à la page principale de Gauthier Huguenin">
             <i data-lucide="arrow-left" class="w-5 h-5 group-hover:-translate-x-1 transition"></i>
             <span class="font-mono text-sm tracking-widest">BACK_TO_REALITY</span>
         </a>
-        <div class="font-mono text-xs text-green-400 animate-pulse">● SYSTEM_ONLINE</div>
+        
+        <!-- Right Side: System Status & Social Icons -->
+        <div class="flex flex-col items-end gap-2">
+            <!-- 6.2 Texte sr-only dans le header -->
+            <div class="font-mono text-xs text-green-400 animate-pulse">
+                <span class="sr-only">Page Galaxy Lab du site de Gauthier Huguenin</span>
+                ● SYSTEM_ONLINE
+            </div>
+
+            <!-- Social Icons -->
+            <div class="flex items-center gap-4">
+                <!-- Mini Mail Button -->
+                <a href="mailto:gauthier@hgnn.io" aria-label="Email Gauthier Huguenin" class="text-slate-400 hover:text-purple-400 transition" title="M'envoyer un email">
+                    <i data-lucide="mail" role="img" class="w-5 h-5"></i>
+                </a>
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/gauthierhuguenin/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn Gauthier Huguenin" class="text-slate-400 hover:text-[#0077b5] transition" title="LinkedIn">
+                    <i data-lucide="linkedin" role="img" class="w-5 h-5"></i>
+                </a>
+                <!-- GitHub (Hover text-white for visibility on dark bg) -->
+                <a href="https://github.com/Gauthier-Huguenin" target="_blank" rel="noopener noreferrer" aria-label="GitHub Gauthier Huguenin" class="text-slate-400 hover:text-white transition" title="GitHub">
+                    <i data-lucide="github" role="img" class="w-5 h-5"></i>
+                </a>
+            </div>
+        </div>
     </nav>
 
     <!-- HERO -->
@@ -175,14 +287,16 @@
         <div class="inline-block px-3 py-1 border border-white/20 rounded-full bg-white/5 text-slate-400 text-xs font-mono mb-6">
             // EXPERIMENTAL_ZONE
         </div>
-        <h1 class="text-5xl md:text-8xl font-bold mb-6 tracking-tighter text-white glitch uppercase" data-text="Le GOAT se voit">
-            Le GOAT se voit
-        </h1>
+        <!-- 5.2 Tous les titres visuels en h2 -->
+        <h2 class="text-5xl md:text-8xl font-bold mb-6 tracking-tighter text-white glitch uppercase" data-text="Plein les yeux">
+            Plein les yeux
+        </h2>
+        <!-- 9. Identité Personnelle intégrée + 6.1 Rel noopener + 8.2 -->
         <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto font-light leading-relaxed">
-            Explorations visuelles générées par 
-            <a href="https://www.midjourney.com/" target="_blank" class="text-white font-mono hover:text-pink-500 transition border-b border-white/20 hover:border-pink-500">Midjourney</a> 
+            <span class="text-white font-medium">Gauthier Huguenin</span> sculpte l'imaginaire numérique : quand l'art du prompt libère la puissance brute de 
+            <a href="https://www.midjourney.com/" target="_blank" rel="noopener noreferrer" class="text-white font-mono hover:text-pink-500 transition border-b border-white/20 hover:border-pink-500">Midjourney</a> 
             & 
-            <a href="https://openai.com/sora" target="_blank" class="text-white font-mono hover:text-purple-500 transition border-b border-white/20 hover:border-purple-500">Sora</a>.
+            <a href="https://openai.com/sora" target="_blank" rel="noopener noreferrer" class="text-white font-mono hover:text-purple-500 transition border-b border-white/20 hover:border-purple-500">Sora</a>.
             <br><span class="text-xs font-mono text-slate-600 mt-2 block">Prompt Engineering // Parameter Tuning // Chaos Control</span>
         </p>
     </header>
@@ -193,7 +307,8 @@
             
             <!-- 1. ORTHODOX WOMAN -->
             <div class="item-card group">
-                <img src="assets/img/orthodox-woman.webp" alt="Orthodox Woman" class="item-media">
+                <!-- 7. Attributs images lazy/width/height/alt -->
+                <img src="assets/img/orthodox-woman.webp" alt="Exploration visuelle IA – Galaxy Lab" width="1000" height="auto" loading="lazy" class="item-media">
                 <div class="code-block">
                     <div class="mb-2 flex justify-between">
                         <span class="c-comment">// SACRED_VISION</span>
@@ -207,7 +322,7 @@
 
             <!-- 2. FLORAL GIRL -->
             <div class="item-card group">
-                <img src="assets/img/floral-girl.webp" alt="Floral Glass Headdress" class="item-media">
+                <img src="assets/img/floral-girl.webp" alt="Exploration visuelle IA – Galaxy Lab" width="1000" height="auto" loading="lazy" class="item-media">
                 <div class="code-block">
                     <div class="mb-2 flex justify-between">
                         <span class="c-comment">// CRYSTAL_VISION</span>
@@ -221,7 +336,7 @@
 
             <!-- 3. GREEN GOAT -->
             <div class="item-card group border-green-500/30 shadow-[0_0_30px_rgba(0,255,65,0.1)]">
-                <img src="assets/img/green-goat.webp" alt="GOAT Grillz" class="item-media">
+                <img src="assets/img/green-goat.webp" alt="Exploration visuelle IA – Galaxy Lab" width="1000" height="auto" loading="lazy" class="item-media">
                 <div class="code-block" style="background: #050d07;">
                     <div class="mb-2 flex justify-between">
                         <span class="c-comment" style="color:#00ff41">// THE_GOAT</span>
@@ -235,7 +350,7 @@
 
             <!-- 4. CROSS WOMAN -->
             <div class="item-card group">
-                <img src="assets/img/cross-woman.webp" alt="Baroque Cross Woman" class="item-media">
+                <img src="assets/img/cross-woman.webp" alt="Exploration visuelle IA – Galaxy Lab" width="1000" height="auto" loading="lazy" class="item-media">
                 <div class="code-block">
                     <div class="mb-2 flex justify-between">
                         <span class="c-comment">// BAROQUE_DIVINITY</span>
@@ -249,7 +364,7 @@
 
             <!-- 5. AK NUN -->
             <div class="item-card group">
-                <img src="assets/img/AKNun.webp" alt="Nun with AK47" class="item-media">
+                <img src="assets/img/AKNun.webp" alt="Exploration visuelle IA – Galaxy Lab" width="1000" height="auto" loading="lazy" class="item-media">
                 <div class="code-block">
                     <div class="mb-2 flex justify-between">
                         <span class="c-comment">// HOLY_WARFARE</span>
@@ -263,7 +378,7 @@
 
             <!-- 6. LIGHT OLD MEN -->
             <div class="item-card group">
-                <img src="assets/img/light-old-men.webp" alt="Neon Robot Man" class="item-media">
+                <img src="assets/img/light-old-men.webp" alt="Exploration visuelle IA – Galaxy Lab" width="1000" height="auto" loading="lazy" class="item-media">
                 <div class="code-block">
                     <div class="mb-2 flex justify-between">
                         <span class="c-comment">// SYNTH_PROPHET</span>
@@ -277,7 +392,7 @@
 
             <!-- 7. BUBBLE CASTLE -->
             <div class="item-card group">
-                <img src="assets/img/bubble-castle.webp" alt="Castle in Bubble" class="item-media">
+                <img src="assets/img/bubble-castle.webp" alt="Exploration visuelle IA – Galaxy Lab" width="1000" height="auto" loading="lazy" class="item-media">
                 <div class="code-block">
                     <div class="mb-2 flex justify-between">
                         <span class="c-comment">// CHRONO_DOME</span>
@@ -295,7 +410,8 @@
     <footer class="text-center pb-12 opacity-50 hover:opacity-100 transition">
         <p class="font-mono text-[10px] text-slate-500">
             END OF TRANSMISSION // 
-            <a href="index.html" class="hover:text-white transition">RETURN_HOME</a>
+            <!-- 6.1 Aria-label pour le retour (même lien qu'en haut) -->
+            <a href="index.html" class="hover:text-white transition" aria-label="Retour à la page principale de Gauthier Huguenin">RETURN_HOME</a>
         </p>
         <p class="font-mono text-[10px] text-slate-600 mt-2">
             © <span id="year"></span> Gauthier Huguenin
@@ -303,8 +419,9 @@
     </footer>
 
     <script>
-        // Init Icons
-        lucide.createIcons();
+        // Init Icons - 8.1 Initialisation Lucide sécurisée
+        if (typeof lucide !== "undefined") lucide.createIcons();
+        
         // Dynamic Year
         document.getElementById('year').innerText = new Date().getFullYear();
     </script>
